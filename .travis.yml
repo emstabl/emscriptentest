@@ -13,6 +13,7 @@ install:
   - ./emsdk install latest
   - ./emsdk activate latest
   - source ./emsdk_env.sh
-  - ls -laR
+  - ls -la clang
+  - ls -la zips
 
 script: true
