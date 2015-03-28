@@ -22,7 +22,7 @@ install:
   - mkdir mybuild
   - cd mybuild
   - ../configure --enable-optimized --disable-assertions --enable-targets=host,js
-  - make -j${NUM_CORES}
+  - make -j${$NUM_CORES}
   - ./emsdk activate latest
   - source ./emsdk_env.sh
 
