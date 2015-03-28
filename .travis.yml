@@ -5,7 +5,7 @@ before_install:
   - sudo apt-get install cmake nodejs python2.7 default-jre
 
 install:
-  - pwd
   - mkdir em
   - cd em
-  - pwd
+  - wget https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz
+  - ls -la
