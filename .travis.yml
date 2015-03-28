@@ -12,5 +12,8 @@ install:
   - ls -la
   - ./emsdk update
   - ./emsdk install latest
+  - ./emsdk activate latest
+  - source ./emsdk_env.sh
+  - emcc -v
 
 script: true
