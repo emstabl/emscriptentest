@@ -1,4 +1,10 @@
 language: cpp
 sudo: required
 before_install:
-  - sudo apt get update
+  - sudo apt-get update
+  - sudo apt-get install cmake nodejs python2.7 default-jre
+
+install:
+  - mkdir em
+  - cd em
+  
