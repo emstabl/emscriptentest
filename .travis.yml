@@ -3,7 +3,7 @@ sudo: required
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq build-essential gcc llvm clang cmake nodejs python2.7 default-jre
-  - sudo apt-get -qq upgrade
+  - sudo apt-get upgrade -qq
   - clang --version
   - g++ --version
   - python --version
@@ -12,6 +12,8 @@ before_install:
   - cmake
   - NUM_CORES=`cat /proc/cpuinfo | grep "^cpu cores" | uniq | cut -c 13- -`
   - echo $NUM_CORES
+  - MYTEST=n
+  - echo -$MYTEST "BLUB"
 
 install:
   - wget https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz
@@ -24,7 +26,7 @@ install:
   - mkdir mybuild
   - cd mybuild
   - ../configure --enable-optimized --disable-assertions --enable-targets=host,js
-  - make -j$NUM_CORES
+  - make -j${NUM_CORES}
   - ./emsdk activate latest
   - source ./emsdk_env.sh
 
