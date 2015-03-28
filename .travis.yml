@@ -18,6 +18,11 @@ install:
   - cd emsdk_portable
   - ./emsdk update
   - ./emsdk install latest emscripten-master clang-master-64bit sdk-master-64bit
+  - cd clang/fastcomp/src
+  - mkdir mybuild
+  - cd mybuild
+  - ../configure --enable-optimized --disable-assertions --enable-targets=host,js
+  - make -j$NUM_CORES
   - ./emsdk activate latest
   - source ./emsdk_env.sh
 
