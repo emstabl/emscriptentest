@@ -2,7 +2,7 @@ language: cpp
 sudo: required
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install -qq cmake nodejs python2.8 default-jre
+  - sudo apt-get install -qq cmake nodejs python2.7 default-jre
 
 install:
   - wget https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz
