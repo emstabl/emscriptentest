@@ -16,7 +16,7 @@ install:
   - rm emsdk-portable.tar.gz
   - cd emsdk_portable
   - ./emsdk update
-  - ./emsdk install latest emscripten-master
+  - ./emsdk install latest emscripten-master clang-master-64bit sdk-master-64bit
   - ./emsdk activate latest
   - source ./emsdk_env.sh
 
