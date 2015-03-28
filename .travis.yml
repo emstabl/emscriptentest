@@ -17,8 +17,8 @@ install:
   - ./emsdk install latest
   - ./emsdk activate latest
   - source ./emsdk_env.sh
+
+script:
   - ls -la
   - ls -la clang/fastcomp
   - ls -la clang/fastcomp/build_master_64
-
-script: true
