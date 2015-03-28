@@ -7,7 +7,7 @@ before_install:
   - node --version
   - java -version
   - cmake
-  - NUM_CORES=`cat /proc/cpuinfo | grep "^cpu cores" | uniq | cut -c 12- -`
+  - NUM_CORES=`cat /proc/cpuinfo | grep "^cpu cores" | uniq | cut -c 13- -`
   - echo $NUM_CORES
 
 install:
