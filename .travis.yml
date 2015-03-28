@@ -9,11 +9,11 @@ install:
   - tar -zxf emsdk-portable.tar.gz
   - rm emsdk-portable.tar.gz
   - cd emsdk_portable
-  - ls -la
   - ./emsdk update
   - ./emsdk install latest
   - ./emsdk activate latest
   - source ./emsdk_env.sh
+  - ls -la
   - emcc -v
 
 script: true
