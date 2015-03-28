@@ -7,6 +7,8 @@ before_install:
   - node --version
   - java -version
   - cmake
+  - NUM_CORES=`cat /proc/cpuinfo | grep "^cpu cores" | uniq`
+  - echo $NUM_CORES
 
 install:
   - wget https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz
@@ -14,7 +16,7 @@ install:
   - rm emsdk-portable.tar.gz
   - cd emsdk_portable
   - ./emsdk update
-  - ./emsdk install latest
+  - ./emsdk install latest emscripten-master
   - ./emsdk activate latest
   - source ./emsdk_env.sh
 
