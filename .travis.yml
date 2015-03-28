@@ -12,3 +12,5 @@ install:
   - ls -la
   - ./emsdk update
   - ./emsdk install latest
+
+script: true
