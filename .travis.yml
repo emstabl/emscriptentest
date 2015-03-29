@@ -14,8 +14,8 @@ before_install:
   - cmake
   - NUM_CORES=`cat /proc/cpuinfo | grep "^cpu cores" | uniq | cut -c 13- -`
   - echo $NUM_CORES
-  - MYTEST=n
-  - echo -$MYTEST "BLUB"
+  - MYTEST="make -j$NUM_CORES "
+  - echo $MYTEST
 
 install:
   - wget https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz
