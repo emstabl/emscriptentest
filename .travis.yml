@@ -2,8 +2,7 @@ language: cpp
 sudo: required
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install -qq build-essential gcc llvm clang cmake nodejs python2.7 default-jre
-  - echo "N" | sudo apt-get upgrade -qq
+  - sudo apt-get install -qq emscripten
   - clang --version
   - g++ --version
   - python --version
@@ -15,23 +14,5 @@ before_install:
   - MYTEST=n
   - echo -$MYTEST "BLUB"
 
-install:
-  - wget https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz
-  - tar -zxf emsdk-portable.tar.gz
-  - rm emsdk-portable.tar.gz
-  - cd emsdk_portable
-  - ./emsdk update
-  - ./emsdk install latest emscripten-master clang-master-64bit sdk-master-64bit
-  - cd clang/fastcomp/src
-  - mkdir mybuild
-  - cd mybuild
-  - ../configure --enable-optimized --disable-assertions --enable-targets=host,js
-  - make -j${NUM_CORES}
-  - ./emsdk activate latest
-  - source ./emsdk_env.sh
-
-script:
-  - ls -la
-  - ls -la clang/fastcomp
-  - ls -la clang/fastcomp/src
-  - ls -laR clang/fastcomp/build_master_64
+source:
+  - true
