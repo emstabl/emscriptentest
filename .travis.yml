@@ -2,7 +2,7 @@ language: cpp
 sudo: required
 before_install:
   - sudo apt-get update -qq
-#  - sudo apt-get install -qq emscripten
+  - sudo apt-get install -qq build-essential gcc llvm clang cmake nodejs python2.7 default-jre
   - wget http://launchpadlibrarian.net/151967526/emscripten_1.4.9~20130620~0ad8724-1ubuntu1_amd64.deb
   - sudo dpkg -i "emscripten_1.4.9~20130620~0ad8724-1ubuntu1_amd64.deb"
   - clang --version
