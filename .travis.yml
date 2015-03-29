@@ -33,3 +33,6 @@ install:
 
 script:
   - ls -la
+  - ls -la clang/fastcomp
+  - ls -la clang/fastcomp/src
+  - ls -laR clang/fastcomp/build_master_64
