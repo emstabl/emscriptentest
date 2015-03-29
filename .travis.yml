@@ -1,7 +1,7 @@
 language: cpp
 sudo: required
 before_install:
-  - sudo apt-config dump
+  - cat /etc/apt/sources.list
   - sudo apt-get update -qq
   - sudo apt-get install -qq emscripten
   - clang --version
