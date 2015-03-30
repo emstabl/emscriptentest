@@ -29,7 +29,7 @@ install:
   - ../configure --enable-optimized --disable-assertions --enable-targets=host,js
   - eval $MYMAKE
   - cd ../../../../..
-  - tar -czf build.tar.gz emsdk_portable/clangfastcomp/src/mybuild/
+  - tar -czf build.tar.gz emsdk_portable/clang/fastcomp/src/mybuild/
   - ls -la
   - ./emsdk activate latest
   - source ./emsdk_env.sh
